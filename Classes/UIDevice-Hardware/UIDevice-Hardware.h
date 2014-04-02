@@ -62,11 +62,10 @@
 #define APPLETV_UNKNOWN_NAMESTRING      @"Unknown Apple TV"
 #define IOS_FAMILY_UNKNOWN_DEVICE       @"Unknown iOS device"
 
-typedef enum {
+typedef NS_ENUM(NSUInteger, UIDevicePlatform) {
     UIDeviceIFPGA,
     
     // iPhone
-    
     UIDeviceIPhone1G,
     UIDeviceIPhone3G,
     UIDeviceIPhone3GS,
@@ -77,7 +76,6 @@ typedef enum {
     UIDeviceIPhone5S,
     
     // iPod
-    
     UIDeviceIPod1G,
     UIDeviceIPod2G,
     UIDeviceIPod3G,
@@ -85,47 +83,41 @@ typedef enum {
     UIDeviceIPod5G,
     
     // iPad
-    
     UIDeviceIPad1G,
     UIDeviceIPad2G,
     UIDeviceIPad3G,
     UIDeviceIPad4G,
     
     // iPad Air
-    
     UIDeviceIPadAir1G,
     
     // iPad Mini
-    
     UIDeviceIPadMini1G,
     UIDeviceIPadMini2G,
     
     // Apple TV
-    
     UIDeviceAppleTV2,
     UIDeviceAppleTV3,
     
     // Simulator
-    
     UIDeviceSimulatoriPhone,
     UIDeviceSimulatoriPad,
     
     // Unknown
-    
     UIDeviceUnknowniPhone,
     UIDeviceUnknowniPod,
     UIDeviceUnknowniPad,
     UIDeviceUnknownAppleTV,
     UIDeviceUnknown,
-} UIDevicePlatform;
+};
 
-typedef enum {
+typedef NS_ENUM(NSUInteger, UIDeviceFamily) {
     UIDeviceFamilyiPhone,
     UIDeviceFamilyiPod,
     UIDeviceFamilyiPad,
     UIDeviceFamilyAppleTV,
     UIDeviceFamilyUnknown,
-} UIDeviceFamily;
+};
 
 @interface UIDevice (Hardware)
 
